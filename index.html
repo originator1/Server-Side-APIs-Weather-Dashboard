@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="Assets/style.css"/>
+  <title>Weather Dashboard</title>
+</head>
+
+
+
+<body class="container bigBody">
+    <div class="jumbotron mainHeader">
+        <h1>Weather Dashboard</h1>
+        <p>Search weather forecasts in any city!</p>
+    </div>
+    <div class="rightSideBox">  
+        <div class="searchBar">
+            <div class="searchMenu">
+                <h4>Search for a City:</h4>
+                <input type="text" class="style1" id="inputText" placeholder="Enter a city">
+                <button class="style1" id="clickToFetch">Search</button>
+                    
+            </div>
+            <hr>
+            <div class="historyBox">
+               <button>Display</button> 
+            </div>
+        </div>
+        
+        <div class="contentBox">
+            <content class="oneDay">
+                <h2>Austin</h2>
+                <ul>
+                    <li>Temp:<span>x</span></li>
+                    <li>Wind:<span>x</span></li>
+                    <li>Humidity:<span>x</span></li>
+                    <li>UV Index:<span>x</span></li>
+                </ul>
+            </content>
+            
+            <content class="fiveDay">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Temp: </p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Temp: </p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Temp: </p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Temp: </p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Temp: </p>
+                    </div>
+                  </div>    
+            </content>
+        </div>
+    </div>   
+  
+  
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="Js/script.js"></script>   
+</body>
+
+</html>
+
+
+
+
+<!-- <div class="btn-group-vertical col-3">
+    <button class="btn btn-primary" type="submit">Austin</button>
+    <button class="btn btn-primary" type="submit">Chicago</button>
+    <button class="btn btn-primary" type="submit">Chicago</button>
+    <button class="btn btn-primary" type="submit">Chicago</button>
+    <button class="btn btn-primary" type="submit">Chicago</button>
+</div>
+<div class="card col-9">
+    <h5 class="card-header">Atlanta</h5>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div> -->
+
+<!-- <button class="style1" data-location="austin">Austin</button>
+<button class="style1" data-location="chicago">Chicago</button>
+<button class="style1" data-location="newyork">New York</button>
+<button class="style1" data-location="orlando">Orlando</button>
+<button class="style1" data-location="sanfran">San Francisco</button>
+<button class="style1" data-location="seattke">Seattle</button>
+<button class="style1" data-location="denver">Denver</button>
+<button class="style1" data-location="atlanta">Atlanta</button> -->

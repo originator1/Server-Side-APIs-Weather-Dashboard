@@ -1,0 +1,76 @@
+.mainHeader {
+    background-image: linear-gradient(to right,blue , purple);
+    text-align: center;
+    color:white;
+    margin:0;
+    padding:0;
+}
+
+.bigBody {
+   height:100vh;
+   padding:0;
+   display:flex;
+   flex-direction:column;
+}
+.stretchy {
+    height:200px;
+}
+
+
+
+.mainDiv {
+    height:100%;
+    width:100%;
+    
+}
+
+.searchBar {
+    width:30vh;
+    padding:8px;
+
+}
+.style1 {
+    width:100%;
+    padding:8px;
+    margin:2px;
+    border-radius:5px;
+}
+
+
+/* .focusedCard {
+    text-align:center;
+    background-color:cornflowerblue;
+    height:200px;
+    position:relative;
+} */
+
+.rightSideBox {
+    display:flex;
+    flex-direction:row;
+    height:100vh;
+   
+}
+.contentBox {
+   width:100vh;
+   padding:8px;
+   height:70%;
+}
+
+.oneDay {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    height:30vh;
+    padding-left: 50px;
+
+}
+
+.fiveDay {
+    display:flex;
+    justify-content:center;
+    height:45vh;
+}
+
+.card-body {
+    padding:0;
+}
