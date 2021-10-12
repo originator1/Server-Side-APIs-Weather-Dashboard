@@ -15,64 +15,67 @@
 
 
 
-<body class="container bigBody">
+<body class="bigBody">
     <div class="jumbotron mainHeader">
         <h1>Weather Dashboard</h1>
         <p>Search weather forecasts in any city!</p>
     </div>
-    <div class="rightSideBox">  
-        <div class="searchBar">
+    <div class="entireBox">  
+        <div class="searchColumn">
             <div class="searchMenu">
-                <h4>Search for a City:</h4>
+                <h2>Search for a City:</h2>
                 <input type="text" class="style1" id="inputText" placeholder="Enter a city">
                 <button class="style1" id="clickToFetch">Search</button>
                     
             </div>
             <hr>
             <div class="historyBox">
-               <button>Display</button> 
+               <button class="style1">Display</button> 
             </div>
         </div>
         
         <div class="contentBox">
             <content class="oneDay">
-                <h2>Austin</h2>
+                <h3 style="font-size: 3em;" id="searchName"></h3>
                 <ul>
-                    <li>Temp:<span>x</span></li>
-                    <li>Wind:<span>x</span></li>
-                    <li>Humidity:<span>x</span></li>
-                    <li>UV Index:<span>x</span></li>
+                    <li>Temp: <span id ="oneDayTemp"></span></li>
+                    <li>Wind:<span id="oneDayWind">x</span></li>
+                    <li>Humidity:<span id="oneDayHum">x</span></li>
+                    <li>UV Index:<span id="oneDayUV">x</span></li>
                 </ul>
             </content>
             
             <content class="fiveDay">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                  <div class="card" style="width: 9rem;">
+                    <div class="">
+                      <p class="card-text">date: </p>
+                      <img src="" class="card-img-top" alt="">
+                      <p>temp</p>
+                      <p>wind</p>
+                      <p>temp</p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 9rem;">
+                    <img src="" class="card-img-top" alt="">
+                    <div class="">
                       <p class="card-text">Temp: </p>
                     </div>
                   </div>
-                  <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                  <div class="card" style="width: 10rem;">
+                    <img src="" class="card-img-top" alt="">
+                    <div class="">
                       <p class="card-text">Temp: </p>
                     </div>
                   </div>
-                  <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                  <div class="card" style="width: 10rem;">
+                    <img src="" class="card-img-top" alt="">
+                    <div class="">
                       <p class="card-text">Temp: </p>
                     </div>
                   </div>
-                  <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Temp: </p>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
+                  <div class="card" style="width: 10rem;">
+                    <img src="" class="card-img-top" alt="">
+                    <div class="">
                       <p class="card-text">Temp: </p>
                     </div>
                   </div>    
