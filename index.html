@@ -23,7 +23,7 @@
     <div class="entireBox">  
         <div class="searchColumn">
             <div class="searchMenu">
-                <h2>Search for a City:</h2>
+                <h2 id="searchLabel">Search for a City:</h2>
                 <input type="text" class="style1" id="inputText" placeholder="Enter a city">
                 <button class="style1" id="clickToFetch">Search</button>
                     
@@ -34,54 +34,54 @@
             </div>
         </div>
         
-        <div class="contentBox">
-            <content class="oneDay">
+        <div id="oneDay">
+            <!-- <content class="oneDay"> -->
                 <h3 style="font-size: 3em;" id="searchName"></h3>
                 <ul>
                     <li>Temp: <span id ="oneDayTemp"></span></li>
-                    <li>Wind:<span id="oneDayWind">x</span></li>
-                    <li>Humidity:<span id="oneDayHum">x</span></li>
-                    <li>UV Index:<span id="oneDayUV">x</span></li>
+                    <li>Wind:<span id="oneDayWind"></span></li>
+                    <li>Humidity:<span id="oneDayHum"></span></li>
+                    <li>UV Index:<span id="oneDayUV"></span></li>
                 </ul>
-            </content>
-            
-            <content class="fiveDay">
-                  <div class="card" style="width: 9rem;">
-                    <div class="">
-                      <p class="card-text">date: </p>
-                      <img src="" class="card-img-top" alt="">
-                      <p>temp</p>
-                      <p>wind</p>
-                      <p>temp</p>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 9rem;">
-                    <img src="" class="card-img-top" alt="">
-                    <div class="">
-                      <p class="card-text">Temp: </p>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 10rem;">
-                    <img src="" class="card-img-top" alt="">
-                    <div class="">
-                      <p class="card-text">Temp: </p>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 10rem;">
-                    <img src="" class="card-img-top" alt="">
-                    <div class="">
-                      <p class="card-text">Temp: </p>
-                    </div>
-                  </div>
-                  <div class="card" style="width: 10rem;">
-                    <img src="" class="card-img-top" alt="">
-                    <div class="">
-                      <p class="card-text">Temp: </p>
-                    </div>
-                  </div>    
-            </content>
-        </div>
-    </div>   
+            <!-- </content> -->
+        </div>    
+        <!-- <div id="fiveDay">
+          <div id="dayOne">
+            <p>date: <span id='oneDate'></span></p>
+            <p>temp: <span id='oneTemp'></span></p>
+            <p>wind: <span id='oneWind'></span></p>
+            <p>temp: <span id='oneHum'></span></p>
+          </div>
+          <div id="dayTwo">
+            <p>date: <span id='twoDate'></span></p>
+            <p>temp: <span id='twoTemp'></span></p>
+            <p>wind: <span id='twoWind'></span></p>
+            <p>Humidity: <span id='twoHum'></span></p>
+          </div>
+          <div id="dayThree">
+            <p>date: <span id='threeDate'></span></p>
+            <p>temp: <span id='threeTemp'></span></p>
+            <p>wind: <span id='threeWind'></span></p>
+            <p>Humidity: <span id='threeHum'></span></p>
+          </div>
+          <div id="dayFour">
+            <p>date: <span id='fourDate'></span></p>
+            <p>temp: <span id='fourTemp'></span></p>
+            <p>wind: <span id='fourWind'></span></p>
+            <p>Humidity: <span id='fourHum'></span></p>
+          </div>
+          <div id="dayFive">
+            <p>date: <span id='fiveDate'></span></p>
+            <p>temp: <span id='fiveTemp'></span></p>
+            <p>wind: <span id='fiveWind'></span></p>
+            <p>temp: <span id='fiveHum'></span></p>
+          </div>    
+        </div> -->
+    </div> 
+    <h2 id="fiveDayTitle">Past Five Day Forcast</h2>
+    <div class="fiveDay">
+     
+    </div>  
   
   
     

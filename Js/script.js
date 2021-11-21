@@ -5,11 +5,17 @@ var searchBtn = document.querySelector("#clickToFetch");
 
 var historyBox = document.querySelector(".historyBox");
 
-var oneDayTempEl = document.querySelector('#oneDayTemp');
 var searchNameEl = document.querySelector('#searchName');
 
-var cityArray = [];
+var oneDayTempEl = document.querySelector('#oneDayTemp');
+var oneDayWindEl = document.querySelector('#oneDayWind');
+var oneDayHumEl = document.querySelector('#oneDayHum');
+var oneDayUvEl = document.querySelector('#oneDayUV');
 
+var fiveDayDiv = document.querySelector('#fiveDay');
+
+var cityArray = [];
+console.log(cityArray);
 //one call api current uv index: current.uvi
 //https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}
 
@@ -19,12 +25,12 @@ function searchCity(valueText) {
   //event.preventDefault();
   //var valueText = inputText.value;
 
-  var queryUrl =
+  var oneDayQueryUrl =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     valueText +
     "&units=imperial&appid=c4a186ac3a697bd2fb942f498b34386c";
 
-  fetch(queryUrl)
+  fetch(oneDayQueryUrl)
     .then(function (response) {
       return response.json();
     })
@@ -36,23 +42,84 @@ function searchCity(valueText) {
       let temp = data.main.temp;
       let wind = data.wind.speed;
       let humidity = data.main.humidity;
-      appendOneDay(temp, searchName);
+      appendOneDay(temp, searchName, wind, humidity);
       // document.querySelector('#oneDayTemp').append(temp + String.fromCharCode(176) + "F");
       // document.querySelector('#searchName').append(searchName);
       
-    })
+    });
     // .catch((err) => alert("Not a city name!"));
+    const fiveDayUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + valueText + "&appid=c4a186ac3a697bd2fb942f498b34386c"
+    fetch(fiveDayUrl)
+      .then(function (response) {
+        return response.json();
+        
+      })
+      .then (function(fiveData) {
+        console.log("This is my 5 day object");
+        console.log(fiveData);
+        
+        
+        let dayOne = fiveData.list[0];
+        let dayTwo = fiveData.list[1];
+        let dayThree = fiveData.list[2];
+        let dayFour = fiveData.list[3];
+        let dayFive = fiveData.list[4];
+        
+        const newFiveDiv = document.querySelector('.fiveDay');
+        
+        if (newFiveDiv.innerHTML !== null) {
+          newFiveDiv.innerHTML = "";
+        };
+
+        dayObjects = [dayOne, dayTwo, dayThree, dayFour, dayFive];
+        dayObjects.map((day) => {
+          let temp = day.main.temp; 
+          let hum = day.main.humidity;
+          let wind = day.wind.speed;
+          
+          const newFiveDiv = document.querySelector('.fiveDay');
+
+         
+
+          newFiveDiv.insertAdjacentHTML('afterbegin', 
+          `<div class="genDiv">
+              <p>temp: <span id='twoTemp'>${temp}</span></p>
+              <p>wind: <span id='twoWind'>${hum}</span></p>
+              <p>Humidity: <span id='twoHum'>${wind}</span></p>
+          </div>`); 
+        });
+
+      })
 }
 
 //append one day data
-function appendOneDay(temp, searchName) {
-  if(searchNameEl.length > 0) {
-    searchNameEl.children.remove();
+function appendOneDay(temp, searchName, wind, humidity) {
+  // if(searchNameEl.length > 0) {
+  //   searchNameEl.children.remove();
+  // };
+  if (searchNameEl.value !== null) {
+    searchNameEl.innerHTML = "";
+  };
+  if (oneDayTempEl.value !== null) {
+    oneDayTempEl.innerHTML = "";
+  };
+  if (oneDayWindEl.value !== null) {
+    oneDayWindEl.innerHTML = "";
+  };
+  if (oneDayHumEl.value !== null) {
+    oneDayHumEl.innerHTML = "";
   };
   
   oneDayTempEl.append(temp + String.fromCharCode(176) + "F");
   searchNameEl.append(searchName);
-};  
+  oneDayWindEl.append(wind + "MPH");
+  oneDayHumEl.append(humidity);
+  // oneDayUvEl.append()
+}; 
+
+function appendDayOne() {
+
+}
 
 
 //push that city into array
@@ -66,7 +133,7 @@ function savingCity(cityName) {
   }
   cityArray.push(cityName);
 
-  console.log(cityArray);
+  // console.log("My cities aray: " + cityArray);
   //store array in local storage
   //setItem to store array in local storage
 
@@ -85,6 +152,7 @@ function displayCities() {
   searchedCities.forEach((cityEl) => {
     console.log(cityEl);
     var cityBtn = document.createElement("button");
+    cityBtn.setAttribute('class', 'generatedBtn')
     cityBtn.textContent = cityEl;
     //add class to the buttons
     cityBtn.classList.add("pastCities");
@@ -101,6 +169,7 @@ document.querySelector(".historyBox").addEventListener("click", function(event){
     var x = event.target.value;
     //pass the value of x to searchCity function as an argument
     searchCity(x);
+    
 })
 
 displayCities()
@@ -112,31 +181,10 @@ searchBtn.addEventListener("click", function(){
 });
 
 
-// LOCAL STORAGE: window.localStorage
-// SAVE TO STORAGE: .setItem   GET FROM STORAGE: .getItem
 
-//     <button class="style1" data-location="austin">Austin</button>
-//     <button class="style1" data-location="chicago">Chicago</button>
-//     <button class="style1" data-location="newyork">New York</button>
-//     <button class="style1" data-location="orlando">Orlando</button>
-//     <button class="style1" data-location="sanfran">San Francisco</button>
-//     <button class="style1" data-location="seattke">Seattle</button>
-//     <button class="style1" data-location="denver">Denver</button>
-//     <button class="style1" data-location="atlanta">Atlanta</button>
 
-// creating function to append past searches to page as element with class
-// create element: document.createElement()  appending: element.append()
-// var valueText = inputText.value;
 
-// PROJECT GUIDELINES
-// GIVEN a weather dashboard with form inputs
-// WHEN I search for a city
-// THEN I am presented with current and future conditions for that city and that city is added to the search history
-// WHEN I view current weather conditions for that city
-// THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-// WHEN I view the UV index
-// THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-// WHEN I view future weather conditions for that city
-// THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-// WHEN I click on a city in the search history
-// THEN I am again presented with current and future conditions for that city
+
+
+
+

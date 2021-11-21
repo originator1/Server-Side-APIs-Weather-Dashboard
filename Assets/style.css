@@ -1,3 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.bigBody {
+    height:100vh;
+    width:100vw;
+    padding:0;
+    margin: 0;
+    background-color:whitesmoke;
+    color:blue;
+}
+
+.entireBox {
+    display: flex;
+    flex-direction: column;
+   
+}
+
 .mainHeader {
     background-image: linear-gradient(to right,blue , purple);
     text-align: center;
@@ -9,21 +30,33 @@
     
 }
 
-.bigBody {
-   height:100%;
-   width:100%;
-   padding:0;
-   background-color:whitesmoke;
-   color:blue;
-   
+#searchLabel {
+    text-align: center;
+}
+#inputText {
+    text-align: center;
 }
 
 .searchColumn {
     
-    padding-left:3%;
+    padding-left:2vw;
     padding-top:4%;
+    width: 95vw;
+    align-items: center;
 
 }
+
+/* #searchName {
+    position: relative;
+    top: 6px;
+} */
+
+.generatedBtn {
+    border-radius: 20%;
+    padding:1%;
+}
+
+
 .style1 {
     width:100%;
     padding:8px;
@@ -32,49 +65,38 @@
 }
 
 
-/* .focusedCard {
-    text-align:center;
-    background-color:cornflowerblue;
-    height:200px;
-    position:relative;
-} */
 
-.entireBox {
-    display:flex;
-    flex-direction:row;
-   
-}
 .contentBox {
    width:100%;
    padding:8px;
-   
-  
 }
 
-.oneDay {
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    height:30vh;
-    padding-left: 10%;
-    font-size: 1.5em;
-
+#oneDay {
+    padding-left: 15vw;
+    padding-top: 3vh;
 }
+
 
 .fiveDay {
     display:flex;
-    flex-wrap:wrap;
-    position:relative;
-    top: 5vh;
-    margin:1%;
-    height:30vh;
-    padding-left:3vw;
-    width:75%;
-    justify-content: space-around;
-    align-content:space-between;
+    justify-content: space-between;
+    padding: 5px;
+    width: 75vw;
+    padding-left: 15vw;
+    margin: 0;
+  
+    
+}
 
+#fiveDayTitle {
+    padding-left: 15vw;
+}
+
+.genDiv {
+    padding-left: 3vw;
 }
 
 .card {
     text-align: center;
 }
+
