@@ -23,11 +23,14 @@
     background-image: linear-gradient(to right,blue , purple);
     text-align: center;
     color:white;
-    margin:0;
-    padding-top:5%;
-    font-size: 2em;
-    border-color: black;
-    
+    padding: 3% 0 3% 0;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.mainHeader > * {
+    width: 75%;
+    margin: auto;
 }
 
 #searchLabel {
@@ -39,9 +42,9 @@
 
 .searchColumn {
     
-    padding-left:2vw;
+    margin: auto;
     padding-top:4%;
-    width: 95vw;
+    width: 80vw;
     align-items: center;
 
 }
@@ -52,16 +55,17 @@
 } */
 
 .generatedBtn {
-    border-radius: 20%;
-    padding:1%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: .5vw;
 }
 
 
 .style1 {
-    width:100%;
-    padding:8px;
-    margin:2px;
-    border-radius:5px;
+    width: 100%;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 5px;
 }
 
 
@@ -72,31 +76,75 @@
 }
 
 #oneDay {
-    padding-left: 15vw;
-    padding-top: 3vh;
+    width: 60vw;
+    margin: auto;
+    border-radius: 20px;
+    margin-bottom: 1vh;
+   border: blue solid 2px;
 }
+
+#oneDay h1 {
+    font-size: 2rem;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 0px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 
 
 .fiveDay {
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 5px;
-    width: 75vw;
-    padding-left: 15vw;
-    margin: 0;
-  
-    
+    width: 60vw;
+    margin: auto;   
 }
 
 #fiveDayTitle {
-    padding-left: 15vw;
+    width: 60vw;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    
+    
 }
 
 .genDiv {
-    padding-left: 3vw;
+   border: 1px solid blue;
+   border-radius: 10px;
+   padding: 3px 3px 0px 3px;
+   width: 15vw;
 }
+
+
 
 .card {
     text-align: center;
+}
+
+
+@media (max-width: 750px) {
+    .genDiv {
+        width: 50vw;
+        border: solid 2px blue;
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: .5vh;
+    }
+
+    .fiveDay {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
